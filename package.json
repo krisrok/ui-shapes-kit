@@ -1,0 +1,11 @@
+{
+  "name": "com.jimmycushnie.ui-shapes-kit_jimmyfork",
+  "displayName": "UI Shapes Kit (Jimmy fork)",
+  "version": "0.0.13",
+  "unity": "2018.1",
+  "description": "Procedural shapes for Unity UI. Original repo by ThisOtherThing",
+  "keywords": [ "UI", "menu", "shape", "procedural" ],
+  "category": "penis lmao",
+  "dependencies": {
+  }
+}
