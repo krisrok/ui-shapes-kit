@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 using ThisOtherThing.Utils;
+using MinAttribute = ThisOtherThing.Utils.MinAttribute;
 
 namespace ThisOtherThing.UI
 {
