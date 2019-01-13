@@ -1,7 +1,7 @@
 {
     "name": "NewAssembly",
     "references": [
-        "GUID:4a8f67a91e104c246b941d1aa6bf9680"
+        "UIShapes"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [
