@@ -7,7 +7,17 @@ namespace ThisOtherThing.UI.Shapes
 	[AddComponentMenu("UI/Shapes/Ellipse", 1)]
 	public class Ellipse : MaskableGraphic, IShape
 	{
-		public GeoUtils.OutlineShapeProperties ShapeProperties =
+        public override Color color
+        {
+            get => ShapeProperties.FillColor;
+            set
+            {
+                ShapeProperties.FillColor = value;
+                SetVerticesDirty();
+            }
+        }
+
+        public GeoUtils.OutlineShapeProperties ShapeProperties =
 			new GeoUtils.OutlineShapeProperties();
 
 		public ShapeUtils.Ellipses.EllipseProperties EllipseProperties =
