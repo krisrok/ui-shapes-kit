@@ -14,7 +14,7 @@ namespace ThisOtherThing.UI.Shapes
             set
             {
                 ShapeProperties.FillColor = value;
-                SetVerticesDirty();
+                ForceMeshUpdate();
             }
         }
 
