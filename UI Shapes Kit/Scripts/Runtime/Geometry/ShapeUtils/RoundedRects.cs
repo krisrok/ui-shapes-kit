@@ -95,19 +95,19 @@ namespace ThisOtherThing.UI.ShapeUtils
 			public RoundedType Type = RoundedType.None;
 			public ResolutionType ResolutionMode = ResolutionType.Uniform;
 
-			public float UniformRadius = 15.0f;
+            [SerializeField] public float UniformRadius = 15.0f;
 			public bool UseMaxRadius = false;
 
-			public float TLRadius = 15.0f;
+            [SerializeField] public float TLRadius = 15.0f;
 			public RoundedCornerProperties TLResolution = new RoundedCornerProperties();
 
-			public float TRRadius = 15.0f;
+			[SerializeField] public float TRRadius = 15.0f;
 			public RoundedCornerProperties TRResolution = new RoundedCornerProperties();
 
-			public float BRRadius = 15.0f;
+            [SerializeField] public float BRRadius = 15.0f;
 			public RoundedCornerProperties BRResolution = new RoundedCornerProperties();
 
-			public float BLRadius = 15.0f;
+            [SerializeField] public float BLRadius = 15.0f;
 			public RoundedCornerProperties BLResolution = new RoundedCornerProperties();
 
 			public RoundedCornerProperties UniformResolution = new RoundedCornerProperties();
