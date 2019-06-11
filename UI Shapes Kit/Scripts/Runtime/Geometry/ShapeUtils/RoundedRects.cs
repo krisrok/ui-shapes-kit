@@ -95,19 +95,19 @@ namespace ThisOtherThing.UI.ShapeUtils
 			public RoundedType Type = RoundedType.None;
 			public ResolutionType ResolutionMode = ResolutionType.Uniform;
 
-            [SerializeField] public float UniformRadius = 15.0f;
+            public float UniformRadius = 15.0f;
 			public bool UseMaxRadius = false;
 
-            [SerializeField] public float TLRadius = 15.0f;
+            public float TLRadius = 15.0f;
 			public RoundedCornerProperties TLResolution = new RoundedCornerProperties();
 
-			[SerializeField] public float TRRadius = 15.0f;
+			public float TRRadius = 15.0f;
 			public RoundedCornerProperties TRResolution = new RoundedCornerProperties();
 
-            [SerializeField] public float BRRadius = 15.0f;
+            public float BRRadius = 15.0f;
 			public RoundedCornerProperties BRResolution = new RoundedCornerProperties();
 
-            [SerializeField] public float BLRadius = 15.0f;
+            public float BLRadius = 15.0f;
 			public RoundedCornerProperties BLResolution = new RoundedCornerProperties();
 
 			public RoundedCornerProperties UniformResolution = new RoundedCornerProperties();
@@ -178,16 +178,21 @@ namespace ThisOtherThing.UI.ShapeUtils
 				float halfShorterSide = shorterSide * 0.5f;
 
 				// check radii don't overlap
+
+                // Uncommenting these checks makes it so that the radius variables get reset to zero when working with prefabs.
+                // I have no idea why. I suspect this is a Unity bug.
+                // For now we'll just live with having radii that can overlap.
+                // -Jimmy
 				switch (Type)
 				{
 					case RoundedType.Uniform:
-						UniformRadius = Mathf.Clamp(UniformRadius, 0.0f, halfShorterSide);
+						//UniformRadius = Mathf.Clamp(UniformRadius, 0.0f, halfShorterSide);
 						break;
 					case RoundedType.Individual:
-						TLRadius = Mathf.Max(TLRadius, 0.0f);
-						TRRadius = Mathf.Max(TRRadius, 0.0f);
-						BRRadius = Mathf.Max(BRRadius, 0.0f);
-						BLRadius = Mathf.Max(BLRadius, 0.0f);
+						//TLRadius = Mathf.Max(TLRadius, 0.0f);
+						//TRRadius = Mathf.Max(TRRadius, 0.0f);
+						//BRRadius = Mathf.Max(BRRadius, 0.0f);
+						//BLRadius = Mathf.Max(BLRadius, 0.0f);
 						break;
 				}
 
