@@ -20,7 +20,7 @@ namespace ThisOtherThing.UI.Shapes
 	public static class RectangleExtensions
 	{
         public static void SetRoundedRadiuses(this Rectangle rectangle, float tl, float tr, float bl, float br)
-            => SetRoundedRadiuses(rectangle, tl, tr, bl, br);
+            => SetRoundedRadiuses(rectangle, new RoundedRadiuses(tl, tr, bl, br));
 
         public static void SetRoundedRadiuses(this Rectangle rectangle, RoundedRadiuses roundedRadiuses)
         {
