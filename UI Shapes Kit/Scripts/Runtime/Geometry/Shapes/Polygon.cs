@@ -6,6 +6,7 @@ namespace ThisOtherThing.UI.Shapes
 {
 
 	[AddComponentMenu("UI/Shapes/Polygon", 30)]
+	[RequireComponent(typeof(CanvasRenderer))]
 	public class Polygon : MaskableGraphic, IShape
 	{
 
