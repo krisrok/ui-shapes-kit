@@ -5,6 +5,7 @@ using System.Collections;
 namespace ThisOtherThing.UI.Shapes
 {
 	[AddComponentMenu("UI/Shapes/Sector", 50)]
+	[RequireComponent(typeof(CanvasRenderer))]
 	public class Sector : MaskableGraphic, IShape
 	{
 		public GeoUtils.ShapeProperties ShapeProperties =
