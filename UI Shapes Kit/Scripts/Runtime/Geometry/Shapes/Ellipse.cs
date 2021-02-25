@@ -5,6 +5,7 @@ using System.Collections;
 namespace ThisOtherThing.UI.Shapes
 {
 	[AddComponentMenu("UI/Shapes/Ellipse", 1)]
+	[RequireComponent(typeof(CanvasRenderer))]
 	public class Ellipse : MaskableGraphic, IShape
 	{
         public override Color color
