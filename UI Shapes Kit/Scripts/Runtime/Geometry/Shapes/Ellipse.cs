@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -34,6 +34,8 @@ namespace ThisOtherThing.UI.Shapes
 
 		public Sprite Sprite;
 
+		public bool UsePixelAdjust = true;
+
 		GeoUtils.UnitPositionData unitPositionData;
 		GeoUtils.EdgeGradientData edgeGradientData;
 		Vector2 radius = Vector2.one;
@@ -63,7 +65,7 @@ namespace ThisOtherThing.UI.Shapes
 			OutlineProperties.UpdateAdjusted();
 			ShadowProperties.UpdateAdjusted();
 
-			Rect pixelRect = RectTransformUtility.PixelAdjustRect(rectTransform, canvas);
+			Rect pixelRect = UsePixelAdjust ? RectTransformUtility.PixelAdjustRect(rectTransform, canvas) : rectTransform.rect;
 
 			ShapeUtils.Ellipses.SetRadius(
 				ref radius,
