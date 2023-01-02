@@ -8,19 +8,9 @@ namespace ThisOtherThing.UI.Shapes
 	[RequireComponent(typeof(CanvasRenderer))]
 	public class Rectangle : MaskableGraphic, IShape
 	{
-        // todo: add override colors for the other shapes
-        public override Color color
-        {
-            get => ShapeProperties.FillColor;
-            set
-            {
-                ShapeProperties.FillColor = value;
-                ForceMeshUpdate();
-            }
-        }
+		public override Color color { get => canvasRenderer.GetColor(); set => canvasRenderer.SetColor(value); }
 
-
-        public GeoUtils.OutlineShapeProperties ShapeProperties =
+		public GeoUtils.OutlineShapeProperties ShapeProperties =
 			new GeoUtils.OutlineShapeProperties();
 
 		public ShapeUtils.RoundedRects.RoundedProperties RoundedProperties = 
@@ -187,6 +177,9 @@ namespace ThisOtherThing.UI.Shapes
 			base.UpdateMaterial();
 
 			// check if this sprite has an associated alpha texture (generated when splitting RGBA = RGB + A as two textures without alpha)
+
+			//canvasRenderer.SetColor(ShapeProperties.TintColor);
+
 
 			if (Sprite == null)
 			{

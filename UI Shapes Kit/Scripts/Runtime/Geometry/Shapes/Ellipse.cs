@@ -8,17 +8,9 @@ namespace ThisOtherThing.UI.Shapes
 	[RequireComponent(typeof(CanvasRenderer))]
 	public class Ellipse : MaskableGraphic, IShape
 	{
-        public override Color color
-        {
-            get => ShapeProperties.FillColor;
-            set
-            {
-                ShapeProperties.FillColor = value;
-                ForceMeshUpdate();
-            }
-        }
+		public override Color color { get => canvasRenderer.GetColor(); set => canvasRenderer.SetColor(value); }
 
-        public GeoUtils.OutlineShapeProperties ShapeProperties =
+		public GeoUtils.OutlineShapeProperties ShapeProperties =
 			new GeoUtils.OutlineShapeProperties();
 
 		public ShapeUtils.Ellipses.EllipseProperties EllipseProperties =

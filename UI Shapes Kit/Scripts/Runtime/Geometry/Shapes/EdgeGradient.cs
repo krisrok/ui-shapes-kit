@@ -9,6 +9,8 @@ namespace ThisOtherThing.UI.Shapes
 	[RequireComponent(typeof(CanvasRenderer))]
 	public class EdgeGradient : MaskableGraphic, IShape
 	{
+		public override Color color { get => canvasRenderer.GetColor(); set => canvasRenderer.SetColor(value); }
+
 		public enum Positions
 		{
 			Top,
