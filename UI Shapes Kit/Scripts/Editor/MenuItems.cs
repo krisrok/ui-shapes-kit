@@ -88,6 +88,8 @@ public class MenuItems
 			Undo.RecordObject(shapeGO.transform, "centered " + name);
 			shapeGO.transform.localPosition = Vector3.zero;
 			shapeGO.transform.localScale = Vector3.one;
+
+			shapeGO.layer = parent.layer;
 		}
 
 		Selection.activeGameObject = shapeGO;
